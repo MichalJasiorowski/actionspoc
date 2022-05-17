@@ -47,6 +47,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Deploy stage
         run: echo Deploy stage pls
+        
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: michaljasiorowski
 
       # Runs a set of commands using the runners shell
       - name: Smoke
