@@ -1,0 +1,14 @@
+name: Deploy to DEMO
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy (empty for newest)'
+        required: false
+jobs:
+  deploy-to-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "deploy release branch to DEMO env"
