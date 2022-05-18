@@ -1,0 +1,14 @@
+name: Deploy On Tag
+
+on:
+  push:
+    tags:        
+      - *
+jobs:
+  deploy-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Log level: $LEVEL"
+          echo "Tags: $TAGS"
+          echo "Environment: $ENVIRONMENT"
