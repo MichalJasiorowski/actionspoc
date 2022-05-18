@@ -1,0 +1,14 @@
+name: Deploy to PROD
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy (empty for newest)'
+        required: false
+jobs:
+  deploy-to-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "deploy release branch to PROD env"
