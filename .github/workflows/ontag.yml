@@ -4,11 +4,11 @@ on:
   push:
     tags:        
       - '**'
+    branches: 
+      - 'release/**'
 jobs:
   deploy-tag:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Log level: $LEVEL"
-          echo "Tags: $TAGS"
-          echo "Environment: $ENVIRONMENT"
+          echo "deploy release branch on tag"
